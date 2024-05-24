@@ -5,8 +5,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Components
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Layout from './layouts/Layout';
 
 // Pages
 import Home from './pages/Home';
@@ -23,32 +22,34 @@ const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <Home />,
+      element: <Layout><Home /></Layout>,
       errorElement: <PageNotFound />
     },
     {
       path: '/about',
-      element: <About />
+      element: <Layout><About /></Layout>,
+      errorElement: <PageNotFound />
     },
     {
       path: '/skills',
-      element: <Skills />
+      element: <Layout><Skills /></Layout>,
+      errorElement: <PageNotFound />
     },
     {
       path: '/projects',
-      element: <Projects />
+      element: <Layout><Projects /></Layout>,
+      errorElement: <PageNotFound />
     },
     {
       path: '/contact',
-      element: <Contact />
+      element: <Layout><Contact /></Layout>,
+      errorElement: <PageNotFound />
     },
   ]
 );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Header />
     <RouterProvider router={router} />
-    <Footer />
   </React.StrictMode>,
 );
