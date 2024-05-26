@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <div>
+    <footer className='flex items-center justify-between p-3 bg-gray-900 text-slate-200'>
       Footer
-    </div>
+    </footer>
   );
 }
