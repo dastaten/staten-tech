@@ -1,34 +1,57 @@
-import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import CreateNavLink from './CreateNavLink';
 
 export default function Navbar() {
+  const [pageTitle, setPageTitle] = useState('Welcome');
+
   return (
-    <nav className='flex items-center justify-between p-4 bg-gray-900 text-slate-200'>
-      <div className='text-2xl font-bold'>Logo</div>
-      <ul className='hidden space-x-4 font-semibold md:flex '>
+    <nav className='flex items-center justify-between py-5 bg-[#1f2533] px-7 text-default'>
+      <div className='text-2xl font-bold md:text-3xl lg:text-4xl'>{pageTitle}</div>
+      <ul className='hidden space-x-3 text-lg font-semibold sm:text-base md:text-lg lg:text-xl sm:flex '>
         <li>
-          <NavLink className='hover:text-slate-100' to="/">
+          <CreateNavLink
+            title="Welcome"
+            path="/"
+            pageTitle={pageTitle}
+            setPageTitle={setPageTitle}>
             Home
-          </NavLink>
+          </CreateNavLink>
         </li>
         <li>
-          <NavLink className='hover:text-slate-100' to="/about">
+          <CreateNavLink
+            title="About me"
+            path="/about"
+            pageTitle={pageTitle}
+            setPageTitle={setPageTitle}>
             About
-          </NavLink>
+          </CreateNavLink>
         </li>
         <li>
-          <NavLink className='hover:text-slate-100' to="/skills">
+          <CreateNavLink
+            title="My skills"
+            path="/skills"
+            pageTitle={pageTitle}
+            setPageTitle={setPageTitle}>
             Skills
-          </NavLink>
+          </CreateNavLink>
         </li>
         <li>
-          <NavLink className='hover:text-slate-100' to="/projects">
+          <CreateNavLink
+            title="My projects"
+            path="/projects"
+            pageTitle={pageTitle}
+            setPageTitle={setPageTitle}>
             Projects
-          </NavLink>
+          </CreateNavLink>
         </li>
         <li>
-          <NavLink className='hover:text-slate-100' to="/contact">
+          <CreateNavLink
+            title="Contact me"
+            path="/contact"
+            pageTitle={pageTitle}
+            setPageTitle={setPageTitle}>
             Contact
-          </NavLink>
+          </CreateNavLink>
         </li>
       </ul>
     </nav>

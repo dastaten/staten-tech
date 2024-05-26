@@ -1,7 +1,9 @@
+import Section from '../components/Section';
+
 export default function Contact() {
   return (
-    <div>
+    <Section>
       Contact
-    </div>
+    </Section>
   );
 }

@@ -1,7 +1,9 @@
+import Section from '../components/Section';
+
 export default function Projects() {
   return (
-    <div>
+    <Section>
       Projects
-    </div>
+    </Section>
   );
 }
