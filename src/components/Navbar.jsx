@@ -1,13 +1,14 @@
 import { useState } from 'react';
+
 import CreateNavLink from './CreateNavLink';
 
-export default function Navbar() {
+export default function Navbar({ error }) {
   const [pageTitle, setPageTitle] = useState('Welcome');
 
   return (
     <nav className='flex items-center justify-between py-5 bg-[#1f2533] px-7 text-default'>
-      <div className='text-2xl font-bold md:text-3xl lg:text-4xl'>{pageTitle}</div>
-      <ul className='hidden space-x-3 text-lg font-semibold sm:text-base md:text-lg lg:text-xl sm:flex '>
+      <div className='text-2xl font-bold md:text-3xl lg:text-4xl'>{error || pageTitle}</div>
+      <ul className='hidden space-x-3 text-lg font-semibold sm:text-base md:text-lg lg:text-xl sm:flex'>
         <li>
           <CreateNavLink
             title="Welcome"

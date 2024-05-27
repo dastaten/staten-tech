@@ -1,10 +1,10 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-export default function Layout({ children }) {
+export default function Layout({ children, error }) {
   return (
     <>
-      <Navbar />
+      <Navbar error={error} />
       {children}
       <Footer />
     </>
