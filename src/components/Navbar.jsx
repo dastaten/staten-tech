@@ -95,8 +95,9 @@ export default function Navbar({ error }) {
         </div>
       </nav>
       <nav
-        className={`rounded-b-lg absolute right-0 z-10 sm:hidden opacity-0 transition-opacity duration-200 ease-in-out bg-[#1f2533] ${menuActive ? 'active opacity-100' : ''}`}
-        ref={menuRef}>
+        className={`rounded-b-lg fixed right-0 z-10 transition-all duration-300 ease-in-out bg-[#1f2533] ${menuActive ? 'translate-x-0' : 'translate-x-full'}`}
+        ref={menuRef}
+      >
         <ul className='flex flex-col items-center gap-5 text-xl p-7'>
           <li>
             <CreateNavLink
