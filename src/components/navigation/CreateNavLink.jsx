@@ -18,7 +18,7 @@ export default function CreateNavLink({
   if (type === 'hamburger') {
     return (
       <NavLink
-        className='p-2 rounded-md text-[#a1ceff]'
+        className='p-2 rounded-md text-alt'
         onClick={() => {
           handleToggleMenu();
           setPageTitle(title);
@@ -35,8 +35,8 @@ export default function CreateNavLink({
       className={({ isActive }) =>
         `transition-all duration-300 ${isActive
           ? 'text-[#38435c] bg-[#a1ceff]'
-          : 'text-[#a1ceff] hover:bg-[#a1ceff] hover:text-[#38435c]'
-        } p-2 rounded-md`
+          : 'text-alt hover:bg-[#a1ceff] hover:text-[#38435c]'
+        } pt-[6px] pb-[4px] px-4 rounded-md`
       }
       to={path}
       onClick={() => setPageTitle(title)}

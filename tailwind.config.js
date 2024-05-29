@@ -6,10 +6,14 @@ export default {
   theme: {
     extend: {
       textColor: {
-        default: '#b0d0eb',
+        default: '#d4ebff',
+        alt: '#a1ceff',
       },
       fontFamily: {
         hind: ['Hind', ...defaultTheme.fontFamily.sans],
+      },
+      backgroundImage: {
+        background: "url('./src/assets/bg.jpg')",
       },
     },
   },
