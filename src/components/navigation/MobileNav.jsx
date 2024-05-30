@@ -14,7 +14,7 @@ export default function MobileNav({ menuActive, menuRef, pageTitle, setPageTitle
             pageTitle={pageTitle}
             setPageTitle={setPageTitle}
             handleToggleMenu={handleToggleMenu}
-            type='hamburger'>
+            type='mobile'>
             Home
           </CreateNavLink>
         </li>
@@ -25,7 +25,7 @@ export default function MobileNav({ menuActive, menuRef, pageTitle, setPageTitle
             pageTitle={pageTitle}
             setPageTitle={setPageTitle}
             handleToggleMenu={handleToggleMenu}
-            type='hamburger'>
+            type='mobile'>
             About
           </CreateNavLink>
         </li>
@@ -36,7 +36,7 @@ export default function MobileNav({ menuActive, menuRef, pageTitle, setPageTitle
             pageTitle={pageTitle}
             setPageTitle={setPageTitle}
             handleToggleMenu={handleToggleMenu}
-            type='hamburger'>
+            type='mobile'>
             Skills
           </CreateNavLink>
         </li>
@@ -47,7 +47,7 @@ export default function MobileNav({ menuActive, menuRef, pageTitle, setPageTitle
             pageTitle={pageTitle}
             setPageTitle={setPageTitle}
             handleToggleMenu={handleToggleMenu}
-            type='hamburger'>
+            type='mobile'>
             Projects
           </CreateNavLink>
         </li>
@@ -58,7 +58,7 @@ export default function MobileNav({ menuActive, menuRef, pageTitle, setPageTitle
             pageTitle={pageTitle}
             setPageTitle={setPageTitle}
             handleToggleMenu={handleToggleMenu}
-            type='hamburger'>
+            type='mobile'>
             Contact
           </CreateNavLink>
         </li>

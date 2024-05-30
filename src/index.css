@@ -3,11 +3,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.font-hind {
-  font-family: 'Hind', sans-serif;
-}
-
-body {
-  @apply font-hind;
-}

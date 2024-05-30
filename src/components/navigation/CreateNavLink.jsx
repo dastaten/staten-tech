@@ -15,7 +15,7 @@ export default function CreateNavLink({
     document.title = `${pageTitle} | Dorian Staten's Front End Developer Portfolio`;
   }, [pageTitle]);
 
-  if (type === 'hamburger') {
+  if (type === 'mobile') {
     return (
       <NavLink
         className='p-2 rounded-md text-alt'
