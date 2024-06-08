@@ -5,7 +5,7 @@ export default function Skills() {
   return (
     <Section>
 
-      <div className='text-sm sm:text-base md:text-lg flex flex-col items-center justify-center w-full max-w-[665px]  my-10 mx-auto gap-5'>
+      <div className='text-sm md:text-base lg:text-lg flex flex-col items-center justify-center w-full max-w-[665px]  my-10 mx-auto gap-5'>
 
         {/* HTML 5 */}
         <Skill
