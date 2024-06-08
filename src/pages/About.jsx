@@ -12,7 +12,7 @@ export default function About() {
 
   return (
     <Section>
-      <div className={`flex flex-col items-center justify-center w-full h-full gap-3 p-5 rounded-xl bg-slate-800 max-w-[800px] mx-auto my-10 text-sm md:text-base lg:text-lg border-[1px] border-[#a1ceff] transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
+      <div className={`flex flex-col items-center justify-center w-full h-full gap-3 p-5 rounded-xl bg-slate-800 max-w-[800px] mx-auto my-10 text-sm md:text-base lg:text-lg border-[1px] border-default transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <h2 className='mt-3 mb-2 text-xl font-bold lg:text-2xl text-alt'>Over 20 Years of IT Experience – Passionate Web Developer</h2>
 
         <p>
@@ -32,7 +32,7 @@ export default function About() {
         <h2 className='mb-2 text-xl font-bold lg:text-2xl text-alt'>Rekindled Passion for Web Development</h2>
 
         <p>
-          After Paper.li, I explored the world of game development, learning Godot and GDevelop to publish <Link className='text-[#a1ceff]' to='https://www.amazon.com/s?i=mobile-apps&rh=p_4%3ADorian+Staten&search-type=ss' target='_blank'> three games on the Amazon Store</Link>. However, my passion for web development ultimately prevailed, leading me to refocus my energy.
+          After Paper.li, I explored the world of game development, learning Godot and GDevelop to publish <Link className='text-alt' to='https://www.amazon.com/s?i=mobile-apps&rh=p_4%3ADorian+Staten&search-type=ss' target='_blank'> three games on the Amazon Store</Link>. However, my passion for web development ultimately prevailed, leading me to refocus my energy.
         </p>
 
         <p className='mb-6'>
@@ -42,7 +42,7 @@ export default function About() {
         <h2 className='mb-2 text-xl font-bold lg:text-2xl text-alt'>Excited to Collaborate</h2>
 
         <p>
-          With a blend of experience in development, technical support, and a renewed passion for web development, {`I'm`} confident I can contribute significantly to your team.  {`I'm`} always interested in hearing about exciting projects and opportunities – please feel free to <Link className='text-[#a1ceff]' to='/contact'>reach out to me</Link> if you have something in mind!
+          With a blend of experience in development, technical support, and a renewed passion for web development, {`I'm`} confident I can contribute significantly to your team.  {`I'm`} always interested in hearing about exciting projects and opportunities – please feel free to <Link className='text-alt' to='/contact'>reach out to me</Link> if you have something in mind!
         </p>
       </div>
     </Section>

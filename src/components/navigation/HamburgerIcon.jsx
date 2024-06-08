@@ -7,11 +7,11 @@ export default function HamburgerIcon({ menuActive, handleToggleMenu, hamburgerR
     >
 
       <div>
-        <span className={`${menuActive ? 'translate-y-[7px] rotate-45' : ''} bar block w-[25px] h-[2px] my-[5px] mx-auto transition duration-300 ease-in-out bg-[#a1ceff]`}></span>
+        <span className={`${menuActive ? 'translate-y-[7px] rotate-45' : ''} bar block w-[25px] h-[2px] my-[5px] mx-auto transition duration-300 ease-in-out bg-alt`}></span>
 
-        <span className={`${menuActive ? 'opacity-0' : ''} bar block w-[25px] h-[2px] my-[5px] mx-auto transition duration-300 ease-in-out bg-[#a1ceff]`}></span>
+        <span className={`${menuActive ? 'opacity-0' : ''} bar block w-[25px] h-[2px] my-[5px] mx-auto transition duration-300 ease-in-out bg-alt`}></span>
 
-        <span className={`${menuActive ? '-translate-y-[7px] -rotate-45' : ''} bar block w-[25px] h-[2px] my-[5px] mx-auto transition duration-300 ease-in-out bg-[#a1ceff]`}></span>
+        <span className={`${menuActive ? '-translate-y-[7px] -rotate-45' : ''} bar block w-[25px] h-[2px] my-[5px] mx-auto transition duration-300 ease-in-out bg-alt`}></span>
       </div>
 
     </div>

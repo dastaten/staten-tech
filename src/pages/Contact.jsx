@@ -43,24 +43,24 @@ export default function Contact() {
       <div className={`flex flex-col items-center justify-center w-full h-[90vh] transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <form
           ref={form}
-          className='flex flex-col w-full gap-3 p-5 rounded-xl h-fit bg-slate-800 max-w-[665px] my-5 border-[1px] border-[#a1ceff]'
+          className='flex flex-col w-full gap-3 p-5 rounded-xl h-fit bg-slate-800 max-w-[665px] my-5 border-[1px] border-default'
           onSubmit={sendEmail}>
           <p className='rounded-md md:text-lg bg-slate-800'>
             Interested in working together? Please fill out the form below with your project or job details, and {`I'll`} be in touch as soon as possible to discuss further.
           </p>
 
-          <hr className='my-5 border-[#d4ebff]' />
+          <hr className='my-5 border-alt' />
 
           <label htmlFor='from_name' className='font-bold'>Name</label>
-          <input type='text' name='from_name' id='from_name' className='text-base max-w-[250px] py-1 pl-2 rounded-md bg-slate-600 focus:outline-[#a1ceff] mb-5' />
+          <input type='text' name='from_name' id='from_name' className='text-base max-w-[250px] py-1 pl-2 rounded-md bg-slate-600 focus:outline-[#94afff] mb-5' />
 
           <label htmlFor='from_email' className='font-bold'>Email</label>
-          <input type='email' name='from_email' id='from_email' className='text-base rounded-md bg-slate-600 max-w-[250px] py-1 pl-2 focus:outline-[#a1ceff] mb-5' />
+          <input type='email' name='from_email' id='from_email' className='text-base rounded-md bg-slate-600 max-w-[250px] py-1 pl-2 focus:outline-[#94afff] mb-5' />
 
           <label htmlFor='message' className='font-bold'>Message</label>
-          <textarea name='message' id='message' className='text-base h-44 py-2 pl-2 rounded-md  bg-slate-600 focus:outline-[#a1ceff]' />
+          <textarea name='message' id='message' className='text-base h-44 py-2 pl-2 rounded-md  bg-slate-600 focus:outline-[#94afff]' />
 
-          <input type='submit' value='Send' className='text-[#a1ceff] self-center px-6 pt-3 py-2 mt-3 rounded-md w-fit hover:text-[#38435c] hover:bg-[#a1ceff] font-bold text-lg transition-all duration-300 bg-slate-600 hover:cursor-pointer' />
+          <input type='submit' value='Send' className='self-center px-6 py-2 pt-3 mt-3 text-lg font-bold transition-all duration-300 rounded-md text-alt w-fit hover:text-dark hover:bg-alt bg-slate-600 hover:cursor-pointer' />
         </form>
       </div>
     </Section>

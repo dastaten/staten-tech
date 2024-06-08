@@ -16,11 +16,22 @@ export default {
     },
     extend: {
       textColor: {
-        default: '#d4ebff',
-        alt: '#a1ceff',
+        default: '#bfcfff',
+        alt: '#94b8ff',
+        dark: '#38435c',
       },
       backgroundImage: {
         background: "url('/bg.jpg')",
+      },
+      backgroundColor: {
+        default: '#38435c',
+        alt: '#94b8ff',
+        dark: '#1f2533',
+        light: '#bfcfff',
+      },
+      borderColor: {
+        default: '#94b8ff',
+        alt: '#bfcfff',
       },
     },
   },

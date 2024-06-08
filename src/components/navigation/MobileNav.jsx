@@ -3,7 +3,7 @@ import CreateNavLink from './CreateNavLink';
 export default function MobileNav({ menuActive, menuRef, pageTitle, setPageTitle, handleToggleMenu }) {
   return (
     <nav
-      className={`rounded-bl-xl fixed right-0 z-10 transition-all duration-300 ease-in-out bg-[#1f2533] ${menuActive ? 'translate-x-0' : 'translate-x-full'}`}
+      className={`rounded-bl-xl fixed right-0 z-10 transition-all duration-300 ease-in-out bg-default ${menuActive ? 'translate-x-0' : 'translate-x-full'}`}
       ref={menuRef}
     >
       <ul className='flex flex-col items-center gap-5 text-xl p-7'>

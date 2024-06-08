@@ -4,7 +4,7 @@ import { dGithub, dLinkedIn } from '../utilities/constants.js';
 
 export default function Footer() {
   return (
-    <div className='text-center px-10 py-5 text-sm lg:text-base text-default bg-[#1f2533]'>
+    <div className='px-10 py-5 text-sm text-center lg:text-base text-default bg-dark'>
       <div className='flex items-center justify-center w-64 gap-5 pt-1 pb-4 mx-auto md:gap-6 lg:gap-7'>
         <span>
           <Link to='https://github.com/dastaten' target="_blank">
