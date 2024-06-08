@@ -4,7 +4,7 @@ import { dGithub, dLinkedIn } from '../utilities/constants.js';
 
 export default function Footer() {
   return (
-    <div className='px-10 py-5 text-sm text-center lg:text-base text-default bg-dark'>
+    <div className=' border-t-2 border-t-[#2f415c] px-10 py-5 text-sm text-center lg:text-base text-default bg-dark'>
       <div className='flex items-center justify-center w-64 gap-5 pt-1 pb-4 mx-auto md:gap-6 lg:gap-7'>
         <span>
           <Link to='https://github.com/dastaten' target="_blank">
@@ -12,7 +12,7 @@ export default function Footer() {
               className='w-8 md:w-10'
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 496 512">
-              <path fill="#7992b5" d={dGithub} />
+              <path fill="#516185" d={dGithub} />
             </svg>
           </Link>
         </span>
@@ -23,11 +23,11 @@ export default function Footer() {
               className='w-8 md:w-10'
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512">
-              <path fill="#7992b5" d={dLinkedIn} /></svg>
+              <path fill="#516185" d={dLinkedIn} /></svg>
           </Link>
         </span>
 
-        <span className='text-lg md:text-xl h-8 md:h-10 px-4 pt-1 flex items-center lg:text-2xl bg-[#7992b5] lg:px-5 rounded-full text-[#1f2533] font-bold'>
+        <span className='text-lg md:text-xl h-8 md:h-10 px-4 pt-1 flex items-center lg:text-2xl bg-[#516185] lg:px-5 rounded-full text-[#283042] font-bold'>
           Resume
         </span>
       </div>

@@ -26,7 +26,7 @@ export default {
       backgroundColor: {
         default: '#38435c',
         alt: '#94b8ff',
-        dark: '#1f2533',
+        dark: '#1E293B',
         light: '#bfcfff',
       },
       borderColor: {
