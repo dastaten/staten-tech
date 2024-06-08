@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { dGithub, dLinkedIn } from '../utilities/constants.js';
 
 import Section from '../components/Section';
-import ProfilePic from '../assets/profile.jpg';
+import ProfilePic from '/profile.jpg';
 
 export default function Home() {
   return (

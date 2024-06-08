@@ -20,7 +20,7 @@ export default {
         alt: '#a1ceff',
       },
       backgroundImage: {
-        background: "url('./src/assets/bg.jpg')",
+        background: "url('/bg.jpg')",
       },
     },
   },

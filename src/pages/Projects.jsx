@@ -1,5 +1,5 @@
 import Section from '../components/Section';
-import underConstruction from '../assets/under-construction.png';
+import underConstruction from '/under-construction.png';
 
 export default function Projects() {
   return (
