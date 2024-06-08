@@ -1,11 +1,19 @@
+import { useState, useEffect } from 'react';
+
 import Section from '../components/Section';
 import Skill from '../components/Skill';
 
 export default function Skills() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <Section>
 
-      <div className='text-sm md:text-base lg:text-lg flex flex-col items-center justify-center w-full max-w-[665px]  my-10 mx-auto gap-5'>
+      <div className={`text-sm md:text-base lg:text-lg flex flex-col items-center justify-center w-full max-w-[665px]  my-10 mx-auto gap-5 transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
 
         {/* HTML 5 */}
         <Skill

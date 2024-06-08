@@ -1,11 +1,18 @@
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 import emailjs from '@emailjs/browser';
 
 import Section from '../components/Section';
 
 export default function Contact() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const form = useRef();
   const navigate = useNavigate();
 
@@ -33,7 +40,7 @@ export default function Contact() {
 
   return (
     <Section>
-      <div className='flex flex-col items-center justify-center w-full h-[90vh]'>
+      <div className={`flex flex-col items-center justify-center w-full h-[90vh] transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <form
           ref={form}
           className='flex flex-col w-full gap-3 p-5 rounded-xl h-fit bg-slate-800 max-w-[665px] my-5 border-[1px] border-[#a1ceff]'

@@ -1,11 +1,18 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 import Section from '../components/Section';
 
 export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <Section>
-      <div className='flex flex-col items-center justify-center w-full h-full gap-3 p-5 rounded-xl bg-slate-800 max-w-[800px] mx-auto my-10 text-sm md:text-base lg:text-lg border-[1px] border-[#a1ceff]'>
+      <div className={`flex flex-col items-center justify-center w-full h-full gap-3 p-5 rounded-xl bg-slate-800 max-w-[800px] mx-auto my-10 text-sm md:text-base lg:text-lg border-[1px] border-[#a1ceff] transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <h2 className='mt-3 mb-2 text-xl font-bold lg:text-2xl text-alt'>Over 20 Years of IT Experience – Passionate Web Developer</h2>
 
         <p>

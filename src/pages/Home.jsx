@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 import { dGithub, dLinkedIn } from '../utilities/constants.js';
 
@@ -6,9 +7,15 @@ import Section from '../components/Section';
 import ProfilePic from '/profile.jpg';
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <Section>
-      <div className='flex items-center justify-center w-full h-[90vh] md:h-[85vh]'>
+      <div className={`flex items-center justify-center w-full h-[90vh] md:h-[85vh] transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <div className='flex flex-col items-center justify-center p-10 md:p-12 lg:p-16 rounded-xl w-fit h-fit md:flex-row gap-8 md:gap-10 lg:gap-14 bg-slate-800 border-[1px] border-[#a1ceff]'>
 
           <div>
