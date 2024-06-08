@@ -6,7 +6,7 @@ export default function About() {
   return (
     <Section>
       <div className='flex flex-col items-center justify-center w-full h-full gap-3 p-5 rounded-xl bg-slate-800 max-w-[800px] mx-auto my-10 text-sm md:text-base lg:text-lg border-[1px] border-[#a1ceff]'>
-        <h2 className='mb-2 text-xl font-bold lg:text-2xl text-alt'>Over 20 Years of IT Experience – Passionate Web Developer</h2>
+        <h2 className='mt-3 mb-2 text-xl font-bold lg:text-2xl text-alt'>Over 20 Years of IT Experience – Passionate Web Developer</h2>
 
         <p>
           My career in IT spans over two decades, fostering a strong foundation in various technical areas. I honed my web development skills over a decade at the City of Baytown, starting as a PC technician and ultimately serving as the sole web developer. This experience allowed me to build a solid foundation in HTML, CSS, and JavaScript.

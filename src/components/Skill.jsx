@@ -1,4 +1,4 @@
-export default function Skill({ skillIcon, skillText, skillExperience, proficiency }) {
+export default function Skill({ skillIcon, skillText, skillExperience, children }) {
   return (
     <div className='flex flex-col items-center max-w-[665px] p-5 pb-5 rounded-xl bg-slate-800 border-[1px] border-[#a1ceff]'>
       <div className='flex flex-col items-center justify-start w-full gap-4 pb-5 sm:gap-8 sm:flex-row'>
@@ -12,8 +12,7 @@ export default function Skill({ skillIcon, skillText, skillExperience, proficien
         {skillExperience}
       </p>
       <div className='w-32 h-2 mt-4 rounded-full bg-[#d4ebff]'>
-        <div className={`w-[${proficiency}%] h-full bg-[#1d8aff] rounded-l-lg`}>
-        </div>
+        {children}
       </div>
     </div>
   );

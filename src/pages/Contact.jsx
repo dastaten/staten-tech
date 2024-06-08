@@ -12,6 +12,11 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    if (e.target.from_name.value === '' || e.target.from_email.value === '' || e.target.message.value === '') {
+      window.alert('Please fill out all fields');
+      return;
+    }
+
     emailjs
       .sendForm('service_8v2r8zd', 'template_cghpgmr', form.current, {
         publicKey: 'SkzG11bG1HK1u2Np4',
