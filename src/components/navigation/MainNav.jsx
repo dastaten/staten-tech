@@ -5,7 +5,7 @@ export default function MainNav({ pageTitle, setPageTitle }) {
     <ul className='hidden space-x-1 text-lg font-semibold sm:text-base md:text-lg lg:text-xl sm:flex'>
       <li>
         <CreateNavLink
-          title="Welcome"
+          title="Welcome!"
           path="/"
           pageTitle={pageTitle}
           setPageTitle={setPageTitle}>

@@ -1,10 +1,13 @@
 import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import emailjs from '@emailjs/browser';
 
 import Section from '../components/Section';
 
 export default function Contact() {
   const form = useRef();
+  const navigate = useNavigate();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -15,7 +18,7 @@ export default function Contact() {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          navigate('/confirmation');
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -25,10 +28,10 @@ export default function Contact() {
 
   return (
     <Section>
-      <div className='flex flex-col items-center justify-center w-full'>
+      <div className='flex flex-col items-center justify-center w-full h-[90vh]'>
         <form
           ref={form}
-          className='flex flex-col w-full gap-3 p-5 rounded-xl h-fit bg-slate-800 max-w-[665px] my-5 border-[1px] border-[#d4ebff]'
+          className='flex flex-col w-full gap-3 p-5 rounded-xl h-fit bg-slate-800 max-w-[665px] my-5 border-[1px] border-[#a1ceff]'
           onSubmit={sendEmail}>
           <p className='text-sm rounded-md sm:text-base md:text-lg bg-slate-800'>
             Interested in working together? Please fill out the form below with your project or job details, and {`I'll`} be in touch as soon as possible to discuss further.

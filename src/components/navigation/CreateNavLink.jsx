@@ -15,6 +15,7 @@ export default function CreateNavLink({
     document.title = `${pageTitle} | Dorian Staten's Front End Developer Portfolio`;
   }, [pageTitle]);
 
+  // Buiild mobile navigation links
   if (type === 'mobile') {
     return (
       <NavLink
@@ -30,6 +31,7 @@ export default function CreateNavLink({
     );
   }
 
+  // Buiild desktop navigation links
   return (
     <NavLink
       className={({ isActive }) =>

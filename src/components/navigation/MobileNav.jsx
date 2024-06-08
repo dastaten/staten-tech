@@ -9,7 +9,7 @@ export default function MobileNav({ menuActive, menuRef, pageTitle, setPageTitle
       <ul className='flex flex-col items-center gap-5 text-xl p-7'>
         <li>
           <CreateNavLink
-            title="Welcome"
+            title="Welcome!"
             path="/"
             pageTitle={pageTitle}
             setPageTitle={setPageTitle}

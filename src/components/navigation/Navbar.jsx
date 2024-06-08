@@ -7,8 +7,8 @@ import MainNav from './MainNav';
 import HamburgerIcon from './HamburgerIcon';
 import MobileNav from './MobileNav';
 
-export default function Navbar({ error }) {
-  const [pageTitle, setPageTitle] = useState('Welcome');
+export default function Navbar({ error, confirmEmail }) {
+  const [pageTitle, setPageTitle] = useState('Welcome!');
   const [menuActive, setMenuActive] = useState(false);
 
   const menuRef = useRef(null);
@@ -38,7 +38,7 @@ export default function Navbar({ error }) {
 
   return (
     <>
-      <NavbarWrapper error={error} pageTitle={pageTitle}>
+      <NavbarWrapper error={error} confirmEmail={confirmEmail} pageTitle={pageTitle}>
         <MainNav
           pageTitle={pageTitle}
           setPageTitle={setPageTitle}

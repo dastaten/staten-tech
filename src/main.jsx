@@ -13,6 +13,7 @@ import About from './pages/About';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Confirmation from './pages/Confirmation';
 import PageNotFound from './pages/PageNotFound';
 
 // Styles
@@ -23,7 +24,7 @@ const router = createBrowserRouter(
     {
       path: '/',
       element: <Layout><Home /></Layout>,
-      errorElement: <PageNotFound />
+      errorElement: <Layout error='404 error'><PageNotFound /></Layout>
     },
     {
       path: '/about',
@@ -40,6 +41,10 @@ const router = createBrowserRouter(
     {
       path: '/contact',
       element: <Layout><Contact /></Layout>,
+    },
+    {
+      path: '/confirmation',
+      element: <Layout confirmEmail='Email sent!'><Confirmation /></Layout>,
     },
   ]
 );
