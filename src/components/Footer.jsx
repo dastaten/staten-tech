@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { dGithub, dLinkedIn } from '../utilities/constants.js';
+import { dGithub, dLinkedIn } from '../utilities/Constants';
 
 export default function Footer() {
   return (

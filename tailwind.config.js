@@ -19,9 +19,11 @@ export default {
         default: '#b3ccff',
         alt: '#75a3ff',
         dark: '#38435c',
+        h2: '#8ab0ff',
       },
       backgroundImage: {
         background: "url('/bg.jpg')",
+        profile: "url('/profile-bg.png')",
       },
       backgroundColor: {
         default: '#38435c',

@@ -2,7 +2,7 @@ const ParticleConfig = {
   autoPlay: true,
   background: {
     color: {
-      value: "#111"
+      value: "#050505"
     },
   },
   backgroundMask: {

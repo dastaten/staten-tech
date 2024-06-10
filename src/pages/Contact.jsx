@@ -45,7 +45,7 @@ export default function Contact() {
           ref={form}
           className='flex flex-col w-full gap-3 p-5 rounded-xl h-fit bg-slate-800 max-w-[665px] border-[1px] border-default'
           onSubmit={sendEmail}>
-          <p className='rounded-md lg:text-lg bg-slate-800'>
+          <p className='rounded-md lg:text-lg'>
             Interested in working together? Please fill out the form below with your project or job details, and {`I'll`} be in touch as soon as possible to discuss further.
           </p>
 
