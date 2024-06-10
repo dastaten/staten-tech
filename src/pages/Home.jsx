@@ -49,7 +49,7 @@ export default function Home() {
                 </Link>
               </span>
 
-              <span className='flex items-center h-10 px-4 pt-1 text-xl font-bold rounded-full md:h-12 lg:text-2xl bg-alt lg:px-5 text-slate-800'>
+              <span className='flex items-center h-10 px-4 pt-1 text-xl font-bold rounded-full md:h-12 lg:text-2xl bg-alt lg:px-5 text-[#010202]'>
                 Resume
               </span>
             </div>

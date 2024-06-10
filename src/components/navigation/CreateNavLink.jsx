@@ -36,8 +36,8 @@ export default function CreateNavLink({
     <NavLink
       className={({ isActive }) =>
         `transition-all duration-300 ${isActive
-          ? 'text-dark bg-alt'
-          : 'text-alt hover:bg-alt hover:text-dark'
+          ? 'text-[#1a1f2b] bg-alt'
+          : 'text-alt hover:bg-alt hover:text-[#1a1f2b]'
         } pt-[7px] pb-[4px] px-4 rounded-full`
       }
       to={path}
