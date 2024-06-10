@@ -13,7 +13,7 @@ export default function PageNotFound() {
 
     <Section>
       <div className={`flex items-center justify-center w-full transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
-        <p className='h-vh lg:text-lg w-fit h-fit p-5 pb-5 rounded-xl bg-slate-800 border-[1px] border-default'>{`Looks like that page doesn't exist. 🤔`}</p>
+        <p className='lg:text-lg p-5 pb-5 rounded-xl bg-slate-800 border-[1px] border-default'>{`Looks like that page doesn't exist. 🤔`}</p>
       </div>
     </Section>
 

@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <Section>
-      <div className={`py-10 flex items-center justify-center w-full transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
+      <div className={`flex items-center justify-center w-full h-full transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <div className={'flex flex-col items-center justify-center p-10 md:p-12 lg:p-16 rounded-xl w-fit h-fit md:flex-row gap-8 md:gap-10 lg:gap-14 bg-slate-800 border-[1px] border-default bg-cover bg-profile bg-opacity-10 bg-center'}>
 
           <div>
