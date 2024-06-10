@@ -40,12 +40,12 @@ export default function Contact() {
 
   return (
     <Section>
-      <div className={`flex flex-col items-center justify-center w-full h-[90vh] transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
+      <div className={`py-10 flex flex-col items-center justify-center w-full min-h-[90vh] transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <form
           ref={form}
-          className='flex flex-col w-full gap-3 p-5 rounded-xl h-fit bg-slate-800 max-w-[665px] my-5 border-[1px] border-default'
+          className='flex flex-col w-full gap-3 p-5 rounded-xl h-fit bg-slate-800 max-w-[665px] border-[1px] border-default'
           onSubmit={sendEmail}>
-          <p className='rounded-md md:text-lg bg-slate-800'>
+          <p className='rounded-md lg:text-lg bg-slate-800'>
             Interested in working together? Please fill out the form below with your project or job details, and {`I'll`} be in touch as soon as possible to discuss further.
           </p>
 

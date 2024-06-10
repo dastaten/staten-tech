@@ -12,7 +12,7 @@ export default function Footer() {
               className='w-8 md:w-10'
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 496 512">
-              <path fill="#516185" d={dGithub} />
+              <path fill="#4A669D" d={dGithub} />
             </svg>
           </Link>
         </span>
@@ -23,11 +23,11 @@ export default function Footer() {
               className='w-8 md:w-10'
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512">
-              <path fill="#516185" d={dLinkedIn} /></svg>
+              <path fill="#4A669D" d={dLinkedIn} /></svg>
           </Link>
         </span>
 
-        <span className='text-lg md:text-xl h-8 md:h-10 px-4 pt-1 flex items-center lg:text-2xl bg-[#516185] lg:px-5 rounded-full text-[#283042] font-bold'>
+        <span className='text-lg md:text-xl h-8 md:h-10 px-4 pt-1 flex items-center lg:text-2xl bg-[#4A669D] lg:px-5 rounded-full text-[#1E293B] font-bold'>
           Resume
         </span>
       </div>

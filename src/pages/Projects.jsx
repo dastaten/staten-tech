@@ -12,9 +12,9 @@ export default function Projects() {
 
   return (
     <Section>
-      <div className={`flex flex-col items-center justify-center w-full h-[85vh] transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
+      <div className={`py-10 flex flex-col items-center justify-center w-full min-h-[85vh] transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <img src={underConstruction} className='w-40 pb-5' alt='Under Construction' />
-        <p className='max-w-[665px] md:text-lg h-fit p-5 rounded-xl bg-slate-800 border-[1px] border-default'>
+        <p className='max-w-[665px] lg:text-lg h-fit p-5 rounded-xl bg-slate-800 border-[1px] border-default'>
           In the Works: Stay tuned for a showcase of my latest creations!
         </p>
       </div>

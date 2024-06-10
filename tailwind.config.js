@@ -16,8 +16,8 @@ export default {
     },
     extend: {
       textColor: {
-        default: '#bfcfff',
-        alt: '#94b8ff',
+        default: '#b3ccff',
+        alt: '#75a3ff',
         dark: '#38435c',
       },
       backgroundImage: {
@@ -25,13 +25,13 @@ export default {
       },
       backgroundColor: {
         default: '#38435c',
-        alt: '#94b8ff',
+        alt: '#75a3ff',
         dark: '#1E293B',
-        light: '#bfcfff',
+        light: '#b3ccff',
       },
       borderColor: {
-        default: '#94b8ff',
-        alt: '#bfcfff',
+        default: '#75a3ff',
+        alt: '#b3ccff',
       },
     },
   },

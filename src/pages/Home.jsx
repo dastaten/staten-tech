@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <Section>
-      <div className={`flex items-center justify-center w-full h-[90vh] md:h-[85vh] transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
+      <div className={`p-10 flex items-center justify-center w-full min-h-[90vh] md:min-h-[85vh] transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <div className='flex flex-col items-center justify-center p-10 md:p-12 lg:p-16 rounded-xl w-fit h-fit md:flex-row gap-8 md:gap-10 lg:gap-14 bg-slate-800 border-[1px] border-default'>
 
           <div>
@@ -34,7 +34,7 @@ export default function Home() {
                     className='w-10 md:w-12'
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 496 512">
-                    <path fill="#94b8ff" d={dGithub} />
+                    <path fill="#75a3ff" d={dGithub} />
                   </svg>
                 </Link>
               </span>
@@ -45,7 +45,7 @@ export default function Home() {
                     className='w-10 md:w-12'
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512">
-                    <path fill="#94b8ff" d={dLinkedIn} /></svg>
+                    <path fill="#75a3ff" d={dLinkedIn} /></svg>
                 </Link>
               </span>
 
