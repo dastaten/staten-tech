@@ -33,19 +33,19 @@ export default function Contact() {
           navigate('/confirmation');
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          window.alert('Hmm, something went wrong: ', error.text);
         },
       );
   };
 
   return (
     <Section>
-      <div className={`py-10 lg:text-lg flex flex-col items-center justify-center w-full transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
+      <div className={`py-10 flex flex-col items-center justify-center w-full transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <form
           ref={form}
           className='flex flex-col w-full gap-3 p-5 rounded-xl h-fit bg-slate-800 max-w-[665px] border-[1px] border-default'
           onSubmit={sendEmail}>
-          <p className='rounded-md'>
+          <p className='rounded-m lg:text-lg'>
             Interested in working together? Please fill out the form below with your project or job details, and {`I'll`} be in touch as soon as possible to discuss further.
           </p>
 
