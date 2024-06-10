@@ -4,12 +4,14 @@ import Footer from '../components/Footer';
 export default function Layout({ children, error, confirmEmail }) {
   return (
     <>
-      <header>
-        <Navbar error={error} confirmEmail={confirmEmail} />
-      </header>
-      <main>
-        {children}
-      </main>
+      <div className='flex-grow'>
+        <header>
+          <Navbar error={error} confirmEmail={confirmEmail} />
+        </header>
+        <main>
+          {children}
+        </main>
+      </div>
       <footer>
         <Footer />
       </footer>
