@@ -28,7 +28,7 @@ export default function Footer() {
         </span>
 
         <span className='text-lg md:text-xl h-8 md:h-10 px-4 pt-1 flex items-center lg:text-2xl bg-[#4A669D] lg:px-5 rounded-full text-[#1E293B] font-bold'>
-          Resume
+          Resumé
         </span>
       </div>
 
