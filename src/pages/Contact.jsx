@@ -52,15 +52,15 @@ export default function Contact() {
           <hr className='my-5 border-alt' />
 
           <label htmlFor='from_name' className='font-bold'>Name</label>
-          <input type='text' name='from_name' id='from_name' className='text-base max-w-[250px] py-1 pl-2 rounded-md bg-slate-600 focus:outline-[#94afff] mb-5' />
+          <input type='text' name='from_name' id='from_name' className='text-base max-w-[250px] py-1 pl-2 rounded-md bg-slate-600 focus:outline-none focus:ring focus:ring-[#75a3ff] mb-5' />
 
           <label htmlFor='from_email' className='font-bold'>Email</label>
-          <input type='email' name='from_email' id='from_email' className='text-base rounded-md bg-slate-600 max-w-[250px] py-1 pl-2 focus:outline-[#94afff] mb-5' />
+          <input type='email' name='from_email' id='from_email' className='text-base rounded-md bg-slate-600 max-w-[250px] py-1 pl-2 mb-5 focus:outline-none focus:ring focus:ring-[#75a3ff]' />
 
           <label htmlFor='message' className='font-bold'>Message</label>
-          <textarea name='message' id='message' className='text-base h-44 py-2 pl-2 rounded-md  bg-slate-600 focus:outline-[#94afff]' />
+          <textarea name='message' id='message' className='text-base h-44 py-2 pl-2 rounded-md  bg-slate-600 focus:outline-none focus:ring focus:ring-[#75a3ff]' />
 
-          <input type='submit' value='Send' className='self-center px-6 py-2 pt-3 mt-3 text-lg font-bold transition-all duration-300 rounded-md text-alt w-fit hover:text-dark hover:bg-alt bg-slate-600 hover:cursor-pointer' />
+          <input type='submit' value='Send' className='self-center px-6 py-2 pt-3 mt-3 text-lg font-bold transition-all duration-300 rounded-full w-fit text-dark bg-alt hover:cursor-pointer hover:bg-[#5991ff] hover:text-[#1a1f2b]' />
         </form>
       </div>
     </Section>
