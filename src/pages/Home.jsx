@@ -31,7 +31,7 @@ export default function Home() {
               <span>
                 <Link to='https://github.com/dastaten' target="_blank">
                   <svg
-                    className='transition-colors duration-300 w-10 md:w-12 hover:fill-[#73a2ff] fill-[#3d7bff]'
+                    className='transition-colors duration-300 w-10 md:w-12 fill-[#73a2ff] hover:fill-[#3d7bff]'
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 496 512">
                     <path d={dGithub} />
@@ -42,14 +42,14 @@ export default function Home() {
               <span>
                 <Link to='https://www.linkedin.com/in/dorian-staten/' target='_blank'>
                   <svg
-                    className='transition-colors duration-300 w-10 md:w-12 hover:fill-[#73a2ff] fill-[#3d7bff]'
+                    className='transition-colors duration-300 w-10 md:w-12 fill-[#73a2ff] hover:fill-[#3d7bff]'
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512">
                     <path d={dLinkedIn} /></svg>
                 </Link>
               </span>
 
-              <span className='transition-colors duration-300 flex items-center h-10 px-4 pt-1 text-xl font-bold rounded-full md:h-12 lg:text-2xl lg:px-5 text-[#010202] hover:cursor-pointer hover:bg-[#73a2ff] bg-[#3d7bff]'>
+              <span className='transition-colors duration-300 flex items-center h-10 px-4 pt-1 text-xl font-bold rounded-full md:h-12 lg:text-2xl lg:px-5 text-[#010202] hover:cursor-pointer bg-[#73a2ff] hover:bg-[#3d7bff]'>
                 Resumé
               </span>
             </div>
