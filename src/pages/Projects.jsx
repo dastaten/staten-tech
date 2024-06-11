@@ -12,7 +12,7 @@ export default function Projects() {
 
   return (
     <Section>
-      <div className={`flex flex-col items-center justify-center w-full transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
+      <div className={`flex flex-col items-center justify-center w-full transition-opacity duration-500 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <img src={underConstruction} className='w-40 pb-5' alt='Under Construction' />
         <p className='max-w-[665px] lg:text-lg h-fit p-5 rounded-xl bg-slate-800 border-[1px] border-default'>
           In the Works: Stay tuned for a showcase of my latest creations!

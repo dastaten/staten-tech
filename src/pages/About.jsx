@@ -12,7 +12,7 @@ export default function About() {
 
   return (
     <Section>
-      <div className={`flex flex-col items-center justify-center w-full h-full gap-3 p-5 rounded-xl bg-slate-800 max-w-[800px] lg:text-lg border-[1px] border-default transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
+      <div className={`flex flex-col items-center justify-center w-full h-full gap-3 p-5 rounded-xl bg-slate-800 max-w-[800px] lg:text-lg border-[1px] border-default transition-opacity duration-500 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <h2 className='mt-3 mb-2 text-xl font-bold text-center md:text-2xl text-h2'>Over 20 Years of IT Experience – Passionate Web Developer</h2>
 
         <p>

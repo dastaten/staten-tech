@@ -40,7 +40,7 @@ export default function Contact() {
 
   return (
     <Section>
-      <div className={`flex flex-col items-center justify-center w-full transition-opacity duration-300 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
+      <div className={`flex flex-col items-center justify-center w-full transition-opacity duration-500 ${isVisible ? ' opacity-100' : 'opacity-0'}`}>
         <form
           ref={form}
           className='flex flex-col w-full gap-3 p-5 rounded-xl h-fit bg-slate-800 max-w-[665px] border-[1px] border-default'
