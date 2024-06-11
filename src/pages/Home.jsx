@@ -24,17 +24,17 @@ export default function Home() {
 
           <div>
             <p className='text-lg text-center lg:text-xl'>Hi, {`I'm`}</p>
-            <p className='pt-1 text-2xl font-bold text-center text-alt lg:text-3xl'>Dorian Staten</p>
+            <p className='pt-1 text-2xl font-bold text-center text-[#3d7bff] lg:text-3xl'>Dorian Staten</p>
             <p className='pt-2 text-xl font-bold text-center pb-7 lg:text-2xl'>Front End Developer</p>
 
             <div className='flex items-center justify-center w-64 gap-5'>
               <span>
                 <Link to='https://github.com/dastaten' target="_blank">
                   <svg
-                    className='w-10 md:w-12'
+                    className='transition-colors duration-300 w-10 md:w-12 hover:fill-[#73a2ff] fill-[#3d7bff]'
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 496 512">
-                    <path fill="#75a3ff" d={dGithub} />
+                    <path d={dGithub} />
                   </svg>
                 </Link>
               </span>
@@ -42,14 +42,14 @@ export default function Home() {
               <span>
                 <Link to='https://www.linkedin.com/in/dorian-staten/' target='_blank'>
                   <svg
-                    className='w-10 md:w-12'
+                    className='transition-colors duration-300 w-10 md:w-12 hover:fill-[#73a2ff] fill-[#3d7bff]'
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512">
-                    <path fill="#75a3ff" d={dLinkedIn} /></svg>
+                    <path d={dLinkedIn} /></svg>
                 </Link>
               </span>
 
-              <span className='flex items-center h-10 px-4 pt-1 text-xl font-bold rounded-full md:h-12 lg:text-2xl bg-alt lg:px-5 text-[#010202]'>
+              <span className='transition-colors duration-300 flex items-center h-10 px-4 pt-1 text-xl font-bold rounded-full md:h-12 lg:text-2xl lg:px-5 text-[#010202] hover:cursor-pointer hover:bg-[#73a2ff] bg-[#3d7bff]'>
                 Resumé
               </span>
             </div>
