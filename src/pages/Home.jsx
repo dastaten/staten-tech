@@ -24,7 +24,7 @@ export default function Home() {
 
           <div>
             <p className='text-lg text-center lg:text-xl'>Hi, {`I'm`}</p>
-            <p className='pt-1 text-2xl font-bold text-center text-[#3d7bff] lg:text-3xl'>Dorian Staten</p>
+            <p className='pt-1 text-2xl font-bold text-center text-[#73a2ff] lg:text-3xl'>Dorian Staten</p>
             <p className='pt-2 text-xl font-bold text-center pb-7 lg:text-2xl'>Front End Developer</p>
 
             <div className='flex items-center justify-center w-64 gap-5'>
