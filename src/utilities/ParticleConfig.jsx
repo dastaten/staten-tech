@@ -59,7 +59,7 @@ const ParticleConfig = {
         quantity: 5,
         particles: {
           color: {
-            value: "#ff0000",
+            value: "#75a3ff",
             animation: {
               enable: true,
               speed: 400,

@@ -9,7 +9,7 @@ export default function Footer() {
         <span>
           <Link to='https://github.com/dastaten' target="_blank">
             <svg
-              className='transition-colors duration-300 w-8 md:w-10 fill-[#3F5785] hover:fill-[#3d7bff]'
+              className='transition-colors duration-300 w-8 md:w-10 fill-[#3F5785] hover:fill-[#5991ff]'
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 496 512">
               <path d={dGithub} />
@@ -20,14 +20,14 @@ export default function Footer() {
         <span>
           <Link to='https://www.linkedin.com/in/dorian-staten/' target='_blank'>
             <svg
-              className='transition-colors duration-300 w-8 md:w-10 fill-[#3F5785] hover:fill-[#3d7bff]'
+              className='transition-colors duration-300 w-8 md:w-10 fill-[#3F5785] hover:fill-[#5991ff]'
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512">
               <path d={dLinkedIn} /></svg>
           </Link>
         </span>
 
-        <span className='transition-colors duration-300 text-lg md:text-xl h-8 md:h-10 px-4 pt-1 flex items-center lg:text-2xl bg-[#3F5785] hover:bg-[#3d7bff] lg:px-5 rounded-full text-[#1E293B] font-bold hover:cursor-pointer'>
+        <span className='transition-colors duration-300 text-lg md:text-xl h-8 md:h-10 px-4 pt-1 flex items-center lg:text-2xl bg-[#3F5785] hover:bg-[#5991ff] lg:px-5 rounded-full text-[#1E293B] font-bold hover:cursor-pointer'>
           Resumé
         </span>
       </div>
