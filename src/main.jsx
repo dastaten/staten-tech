@@ -15,6 +15,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Confirmation from './pages/Confirmation';
 import PageNotFound from './pages/PageNotFound';
+import FlexBox from './projects/flex-box/FlexBox';
 
 // Styles
 import './index.css';
@@ -45,6 +46,10 @@ const router = createBrowserRouter(
     {
       path: '/confirmation',
       element: <Layout confirmEmail='Email sent!'><Confirmation /></Layout>,
+    },
+    {
+      path: '/flex-box',
+      element: <FlexBox />,
     },
   ]
 );

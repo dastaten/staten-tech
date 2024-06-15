@@ -49,9 +49,11 @@ export default function Home() {
                 </Link>
               </span>
 
-              <span className='transition-colors duration-300 flex items-center h-10 px-4 pt-1 text-xl font-bold rounded-full md:h-12 lg:text-2xl lg:px-5 text-[#010202] hover:cursor-pointer bg-[#73a2ff] hover:bg-[#3d7bff]'>
-                Resumé
-              </span>
+              <Link to='/Dorian_Staten_-_Front-End_Developer.pdf' target='_blank'>
+                <span className='transition-colors duration-300 flex items-center h-10 px-4 pt-1 text-xl font-bold rounded-full md:h-12 lg:text-2xl lg:px-5 text-[#010202] hover:cursor-pointer bg-[#73a2ff] hover:bg-[#3d7bff]'>
+                  Resumé
+                </span>
+              </Link>
             </div>
 
           </div>

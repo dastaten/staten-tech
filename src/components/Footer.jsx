@@ -27,9 +27,11 @@ export default function Footer() {
           </Link>
         </span>
 
-        <span className='transition-colors duration-300 text-lg md:text-xl h-8 md:h-10 px-4 pt-1 flex items-center lg:text-2xl bg-[#3F5785] hover:bg-[#5991ff] lg:px-5 rounded-full text-[#1E293B] font-bold hover:cursor-pointer'>
-          Resumé
-        </span>
+        <Link to='/Dorian_Staten_-_Front-End_Developer.pdf' target='_blank'>
+          <span className='transition-colors duration-300 text-lg md:text-xl h-8 md:h-10 px-4 pt-1 flex items-center lg:text-2xl bg-[#3F5785] hover:bg-[#5991ff] lg:px-5 rounded-full text-[#1E293B] font-bold hover:cursor-pointer'>
+            Resumé
+          </span>
+        </Link>
       </div>
 
       <p className='mb-2'>
