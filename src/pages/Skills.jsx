@@ -21,7 +21,7 @@ export default function Skills() {
           skillText="Possessing over 20 years of experience in HTML, I have developed a deep understanding of its core principles and best practices."
           skillExperience="20+ years experience."
         >
-          <div className={`w-[85%] h-full bg-[#1d8aff] rounded-l-lg`}></div>
+          <div className={`w-[90%] h-full bg-[#1d8aff] rounded-l-lg`}></div>
         </Skill>
 
         {/* CSS 3 */}
@@ -30,7 +30,7 @@ export default function Skills() {
           skillText="Building upon my foundation in HTML, I utilize CSS to create dynamic and responsive web layouts, ensuring my web pages adapt seamlessly across various devices."
           skillExperience="20+ years experience."
         >
-          <div className={`w-[80%] h-full bg-[#1d8aff] rounded-l-lg`}></div>
+          <div className={`w-[85%] h-full bg-[#1d8aff] rounded-l-lg`}></div>
         </Skill>
 
         {/* JavaScript */}
@@ -39,7 +39,7 @@ export default function Skills() {
           skillText="Leveraging a strong foundation in JavaScript honed over 20 years, I've spent the past several months expanding my skillset to encompass more advanced concepts and ES6 features."
           skillExperience="20+ years experience."
         >
-          <div className={`w-[70%] h-full bg-[#1d8aff] rounded-l-lg`}></div>
+          <div className={`w-[75%] h-full bg-[#1d8aff] rounded-l-lg`}></div>
         </Skill>
 
         {/* React */}
