@@ -17,6 +17,7 @@ export default function FlexBox() {
         <Box>4</Box>
         <Box>5</Box>
         <Box>6</Box>
+        <Box>7</Box>
       </Boxes>
       <StyleDisplay currentStyles={currentStyles} />
       <Buttons setCurrentStyles={setCurrentStyles} />

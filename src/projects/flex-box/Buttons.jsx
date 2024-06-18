@@ -14,9 +14,9 @@ const btnTextAndStyle = [
   ['Justify Between', 'justify-between'],
   ['Justify Around', 'justify-around'],
   ['Justify Evenly', 'justify-evenly'],
-  ['Align Start', 'align-start'],
-  ['Align Center', 'align-center'],
-  ['Align End', 'align-end']
+  ['Items Start', 'items-start'],
+  ['Items Center', 'items-center'],
+  ['Items End', 'items-end']
 ];
 
 const contradictoryStyles = {
@@ -33,10 +33,10 @@ const contradictoryStyles = {
   'justify-between': ['justify-start', 'justify-end', 'justify-center', 'justify-around', 'justify-evenly'],
   'justify-around': ['justify-start', 'justify-end', 'justify-center', 'justify-between', 'justify-evenly'],
   'justify-evenly': ['justify-start', 'justify-end', 'justify-center', 'justify-between', 'justify-around'],
-  'align-start': ['align-end', 'align-center', 'align-stretch'],
-  'align-end': ['align-start', 'align-center', 'align-stretch'],
-  'align-center': ['align-start', 'align-end', 'align-stretch'],
-  'align-stretch': ['align-start', 'align-end', 'align-center']
+  'items-start': ['items-end', 'items-center', 'items-stretch'],
+  'items-end': ['items-start', 'items-center', 'items-stretch'],
+  'items-center': ['items-start', 'items-end', 'items-stretch'],
+  'items-stretch': ['items-start', 'items-end', 'items-center']
 };
 
 export default function Buttons({ setCurrentStyles }) {
@@ -74,10 +74,12 @@ export default function Buttons({ setCurrentStyles }) {
       {btnTextAndStyle.map((btnProps, btnIndex) => (
         <div
           key={btnIndex}
-          className={`flex items-center justify-center px-4 pt-2 pb-1 transition-colors duration-300 border-2 border-sky-400 rounded-lg lg:px-5 lg:pt-3 lg:pb-2 hover:cursor-pointer ${activeButtons.includes(btnIndex)
+          className={`flex items-center justify-center px-4 pt-2 pb-1 transition-colors duration-300 border-2 border-sky-400 rounded-lg lg:px-5 lg:pt-3 lg:pb-2  ${activeButtons.includes(btnIndex)
             ? 'bg-sky-900 text-sky-400'
             : 'bg-sky-400 text-slate-800'
-            } ${isButtonDisabled(btnIndex) ? 'opacity-50 cursor-not-allowed' : ''}`}
+            } ${isButtonDisabled(btnIndex)
+              ? 'opacity-50 cursor-not-allowed'
+              : 'hover:cursor-pointer'}`}
           onClick={() => !isButtonDisabled(btnIndex) && handleButtonClick(btnIndex)}
           disabled={isButtonDisabled(btnIndex)}
         >
