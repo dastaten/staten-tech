@@ -8,29 +8,28 @@ export default function Buttons({ setCurrentStyles }) {
   const [currentStylesState, setCurrentStylesState] = useState([]);
 
   const handleButtonClick = (index) => {
-    setActiveButtons((prevActiveButtons) => {
-      const isActive = prevActiveButtons.includes(index);
-      return isActive
-        ? prevActiveButtons.filter((i) => i !== index)
-        : [...prevActiveButtons, index];
-    });
+    const newStyle = btnTextAndStyle[index][1];
+    const isActive = activeButtons.includes(index);
 
-    setCurrentStylesState((prevCurrentStyles) => {
-      const style = btnTextAndStyle[index][1];
-      const isStylePresent = prevCurrentStyles.includes(style);
-      const newStyles = isStylePresent
-        ? prevCurrentStyles.filter((s) => s !== style)
-        : [...prevCurrentStyles, style];
+    // Remove contradictory styles and their corresponding active buttons
+    const updatedStyles = currentStylesState.filter(
+      (style) => !contradictoryStyles[newStyle]?.includes(style)
+    );
+    const updatedActiveButtons = activeButtons.filter(
+      (buttonIndex) => !contradictoryStyles[newStyle]?.includes(btnTextAndStyle[buttonIndex][1])
+    );
 
-      setCurrentStyles(newStyles);
-      return newStyles;
-    });
-  };
+    // Add or remove the new style and update active buttons
+    const newStyles = isActive
+      ? updatedStyles.filter((style) => style !== newStyle)
+      : [...updatedStyles, newStyle];
+    const newActiveButtons = isActive
+      ? updatedActiveButtons.filter((buttonIndex) => buttonIndex !== index)
+      : [...updatedActiveButtons, index];
 
-  const isButtonDisabled = (index) => {
-    const style = btnTextAndStyle[index][1];
-    const contradictoryStylesForCurrentStyle = contradictoryStyles[style] || [];
-    return contradictoryStylesForCurrentStyle.some((s) => currentStylesState.includes(s));
+    setCurrentStylesState(newStyles);
+    setCurrentStyles(newStyles);
+    setActiveButtons(newActiveButtons);
   };
 
   return (
@@ -38,14 +37,11 @@ export default function Buttons({ setCurrentStyles }) {
       {btnTextAndStyle.map((btnProps, btnIndex) => (
         <div
           key={btnIndex}
-          className={`flex items-center justify-center px-4 pt-2 pb-1 transition-colors duration-300 border-2 border-sky-400 rounded-lg lg:px-5 lg:pt-3 lg:pb-2  ${activeButtons.includes(btnIndex)
+          className={`flex items-center justify-center px-4 pt-2 pb-1 transition-colors duration-300 border-2 border-sky-400 rounded-lg lg:px-5 lg:pt-3 lg:pb-2 cursor-pointer ${activeButtons.includes(btnIndex)
             ? 'bg-sky-900 text-sky-400'
             : 'bg-sky-400 text-slate-800'
-            } ${isButtonDisabled(btnIndex)
-              ? 'opacity-50 cursor-not-allowed'
-              : 'hover:cursor-pointer'}`}
-          onClick={() => !isButtonDisabled(btnIndex) && handleButtonClick(btnIndex)}
-          disabled={isButtonDisabled(btnIndex)}
+            }`}
+          onClick={() => handleButtonClick(btnIndex)}
         >
           {btnProps[0]}
         </div>
