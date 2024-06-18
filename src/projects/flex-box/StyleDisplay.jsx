@@ -1,6 +1,21 @@
 import copy from '/copy.png';
+import { useState } from 'react';
 
 export default function StyleDisplay({ currentStyles, numberOfBoxes, handleSelectChange }) {
+  const [copyMessage, setCopyMessage] = useState('');
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(currentStyles.join(' '));
+      setCopyMessage('Copied to clipboard');
+      setTimeout(() => {
+        setCopyMessage('');
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  };
+
   return (
     <div className='flex w-full gap-3'>
       <div className='flex border-2 rounded-md border-sky-700 min-h-[5vh] w-fit min-w-[130px] text-sky-200 justify-center items-center text-lg lg:text-xl font-bold pt-1 px-3'>
@@ -31,12 +46,20 @@ export default function StyleDisplay({ currentStyles, numberOfBoxes, handleSelec
       </div>
       <div className='flex border-2 rounded-md border-sky-700 min-h-[5vh] grow text-sky-200 justify-center items-center text-lg lg:text-xl font-bold pt-1'>
         {currentStyles.includes('flex') ? (
-          <div className='flex flex-wrap items-center'>
-            <span className='whitespace-nowrap'>Current styles:&nbsp;</span>
+          <div className='flex flex-wrap items-center gap-2'>
+            <span className='whitespace-nowrap'>Current styles:</span>
             <span className='text-sky-300'>{currentStyles.join(' ')}</span>
-            {<img src={copy} alt='copy' className='w-5 h-5 ml-3 cursor-pointer' onClick={() => navigator.clipboard.writeText(currentStyles.join(' '))} />}
+            <div>
+              <img
+                src={copy}
+                alt='copy'
+                className='inline w-5 h-5 cursor-pointer'
+                onClick={handleCopy}
+              />
+              {copyMessage && <span className='ml-3'>{copyMessage}</span>}
+            </div>
           </div>
-        ) : <span>Select <span className='text-sky-300'>Flex</span> to begin</span>}
+        ) : <span>Select <span className='inline text-sky-300'>Flex</span> to begin</span>}
       </div>
     </div>
   );
