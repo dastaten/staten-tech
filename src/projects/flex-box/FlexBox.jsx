@@ -7,19 +7,24 @@ import Buttons from './Buttons.jsx';
 
 export default function FlexBox() {
   const [currentStyles, setCurrentStyles] = useState([]);
+  const [numberOfBoxes, setNumberOfBoxes] = useState(5);
+
+  const handleSelectChange = (event) => {
+    setNumberOfBoxes(parseInt(event.target.value));
+  };
 
   return (
     <div className='flex flex-col items-center w-full h-screen gap-3 p-5 bg-gray-950'>
       <Boxes currentStyles={currentStyles}>
-        <Box>1</Box>
-        <Box>2</Box>
-        <Box>3</Box>
-        <Box>4</Box>
-        <Box>5</Box>
-        <Box>6</Box>
-        <Box>7</Box>
+        {[...Array(numberOfBoxes)].map((_, index) => (
+          <Box key={index}>{index + 1}</Box>
+        ))}
       </Boxes>
-      <StyleDisplay currentStyles={currentStyles} />
+      <StyleDisplay
+        currentStyles={currentStyles}
+        numberOfBoxes={numberOfBoxes}
+        handleSelectChange={handleSelectChange}
+      />
       <Buttons setCurrentStyles={setCurrentStyles} />
     </div>
   );
