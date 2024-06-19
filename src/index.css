@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 15px;
+  width: 13px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -18,4 +18,16 @@
   background-color: #38bdf8;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+.custom-scrollbar-main::-webkit-scrollbar {
+  width: 15px;
+}
+
+.custom-scrollbar-main::-webkit-scrollbar-track {
+  background-color: #050505;
+}
+
+.custom-scrollbar-main::-webkit-scrollbar-thumb {
+  background-color: #34496b;
 }
