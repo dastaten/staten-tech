@@ -27,6 +27,7 @@ export default function Projects() {
             </ul>
             The Flex Box Playground streamlines the process of creating responsive layouts, making it an invaluable resource for both beginners learning flexbox and experienced developers seeking a quick styling solution.
           </div>
+          <Link className='px-6 py-2 pt-3 mb-2 text-lg font-bold transition-all duration-300 rounded-full w-fit text-dark bg-alt hover:cursor-pointer hover:bg-[#5991ff] hover:text-[#1a1f2b]' to='/flex-box' target='_blank'><span className='flex justify-center'>View Project</span></Link>
         </div>
       </div>
     </Section>
