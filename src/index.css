@@ -21,7 +21,7 @@
 }
 
 .custom-scrollbar-main::-webkit-scrollbar {
-  width: 15px;
+  width: 11px;
 }
 
 .custom-scrollbar-main::-webkit-scrollbar-track {
@@ -30,4 +30,8 @@
 
 .custom-scrollbar-main::-webkit-scrollbar-thumb {
   background-color: #3c5e9e;
+}
+
+.custom-scrollbar-main::-webkit-scrollbar-thumb:hover {
+  background-color: #8ab0ff;
 }
