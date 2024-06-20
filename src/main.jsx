@@ -48,7 +48,7 @@ const router = createBrowserRouter(
       element: <Layout confirmEmail='Email sent!'><Confirmation /></Layout>,
     },
     {
-      path: '/flex-box',
+      path: '/flexbox',
       element: <FlexBox />,
     },
   ]

@@ -13,7 +13,7 @@ export default function FlexBox() {
     setNumberOfBoxes(parseInt(event.target.value));
   };
 
-  document.title = `Flex Box Playground | Dorian Staten's Front End Developer Portfolio`;
+  document.title = `Flexbox Playground | Dorian Staten's Front End Developer Portfolio`;
 
   return (
     <div className='flex flex-col items-center w-full h-screen gap-3 p-5 bg-gray-950'>
