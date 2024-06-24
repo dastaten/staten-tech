@@ -16,6 +16,8 @@ import Contact from './pages/Contact';
 import Confirmation from './pages/Confirmation';
 import PageNotFound from './pages/PageNotFound';
 import FlexBox from './projects/flex-box/FlexBox';
+import GroceryList from './projects/grocery-list/Main';
+import WeatherApp from './projects/weather-app/Main';
 
 // Styles
 import './index.css';
@@ -50,6 +52,14 @@ const router = createBrowserRouter(
     {
       path: '/flexbox',
       element: <FlexBox />,
+    },
+    {
+      path: '/grocery-list',
+      element: <GroceryList />,
+    },
+    {
+      path: '/weather-app',
+      element: <WeatherApp />,
     },
   ]
 );

@@ -13,7 +13,7 @@ export default function FlexBox() {
     setNumberOfBoxes(parseInt(event.target.value));
   };
 
-  document.title = `Flexbox Playground | Dorian Staten's Front End Developer Portfolio`;
+  document.title = `Flexbox Playground | An interactive tool that allows developers to experiment with flexbox styles and generate custom Tailwind CSS classes`;
 
   return (
     <div className='flex flex-col items-center w-full h-screen gap-3 p-5 bg-gray-950'>
