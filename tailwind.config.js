@@ -13,6 +13,7 @@ export default {
     },
     fontFamily: {
       sans: ['Hind', ...defaultTheme.fontFamily.sans],
+      weather: ['"M PLUS Rounded 1c"', ...defaultTheme.fontFamily.sans],
     },
     extend: {
       textColor: {
