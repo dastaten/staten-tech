@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import clouds from './images/clouds.jpg';
 import SearchForm from './SearchForm';
 import ResultsTop from './ResultsTop';
@@ -7,23 +7,24 @@ import useWeather from './useWeather';
 import TransitionWrapper from './TransitionWrapper';
 
 export default function Main() {
-  const [location, setLocation] = useState('');
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+
+  const [location, setLocation] = useState('');
+
   const { data, notFound, isLoading, fetchWeather } = useWeather(apiKey);
 
   useEffect(() => {
     document.title = 'React Weather App | A Staten Tech Project';
   }, []);
 
-  const searchLocation = (event) => {
-    event.preventDefault();
+  const searchLocation = useCallback(() => {
     fetchWeather(location);
-    setLocation('');
-  };
+  }, [location, fetchWeather]);
 
-  const handleInputChange = (event) => {
-    setLocation(event.target.value);
-  };
+  const handleInputChange = useCallback((event) => {
+    const value = event.target.value;
+    setLocation(value);
+  }, []);
 
   const renderContent = () => {
     if (data.name) {
@@ -56,7 +57,11 @@ export default function Main() {
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       <div className="relative z-10 flex flex-col h-full py-10 text-gray-50">
         <div className="flex flex-col flex-grow">
-          <SearchForm location={location} handleInputChange={handleInputChange} searchLocation={searchLocation} />
+          <SearchForm
+            location={location}
+            handleInputChange={handleInputChange}
+            searchLocation={searchLocation}
+          />
           <div className="flex-grow w-full max-w-md mx-auto">
             <TransitionWrapper isLoading={isLoading}>
               {renderContent()}

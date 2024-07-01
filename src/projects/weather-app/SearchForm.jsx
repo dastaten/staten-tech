@@ -9,9 +9,14 @@ export default function SearchForm({ location, handleInputChange, searchLocation
     }
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    searchLocation(location);
+  };
+
   return (
-    <div className='flex justify-center text-gray-800 pb-9'>
-      <form onSubmit={searchLocation}>
+    <div className='relative flex justify-center text-gray-800 pb-9'>
+      <form onSubmit={handleSubmit}>
         <input
           ref={inputRef}
           className='p-1 pt-2 pl-4 border-2 rounded-full border-slate-300 focus:outline-none focus:ring focus:ring-[#c5e8ff] w-[265px] text-slate-500'

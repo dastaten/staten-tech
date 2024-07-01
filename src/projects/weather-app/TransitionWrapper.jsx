@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const TransitionWrapper = ({ children, isLoading }) => {
+export default function TransitionWrapper({ children, isLoading }) {
   const [isVisible, setIsVisible] = useState(true);
   const [content, setContent] = useState(children);
 
@@ -11,14 +11,14 @@ const TransitionWrapper = ({ children, isLoading }) => {
       setIsVisible(false);
       fadeOutTimer = setTimeout(() => {
         setContent(null);
-      }, 450);
+      }, 350);
     } else {
       contentTimer = setTimeout(() => {
         setContent(children);
         fadeInTimer = setTimeout(() => {
           setIsVisible(true);
         }, 50);
-      }, 450);
+      }, 350);
     }
 
     return () => {
@@ -30,11 +30,9 @@ const TransitionWrapper = ({ children, isLoading }) => {
 
   return (
     <div
-      className={`transition-opacity duration-450 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'} flex flex-col justify-between h-full w-full px-5 sm:px-0`}
+      className={`transition-opacity duration-350 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'} flex flex-col justify-between h-full w-full px-4 sm:px-0`}
     >
       {content}
     </div>
   );
-};
-
-export default TransitionWrapper;
+}
