@@ -5,26 +5,41 @@ import ResultsTop from './ResultsTop';
 import ResultsBottom from './ResultsBottom';
 import useWeather from './useWeather';
 import TransitionWrapper from './TransitionWrapper';
+import useDebounce from './useDebounce';
 
 export default function Main() {
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
   const [location, setLocation] = useState('');
+  const debouncedLocation = useDebounce(location, 300);
 
-  const { data, notFound, isLoading, fetchWeather } = useWeather(apiKey);
+  const { data, notFound, isLoading, fetchWeather, suggestions, fetchSuggestions, clearSuggestions } = useWeather(apiKey);
 
   useEffect(() => {
     document.title = 'React Weather App | A Staten Tech Project';
   }, []);
 
-  const searchLocation = useCallback(() => {
-    fetchWeather(location);
-  }, [location, fetchWeather]);
+  useEffect(() => {
+    if (debouncedLocation) {
+      fetchSuggestions(debouncedLocation);
+    } else {
+      clearSuggestions();
+    }
+  }, [debouncedLocation, fetchSuggestions, clearSuggestions]);
+
+  const searchLocation = useCallback((lat, lon) => {
+    fetchWeather(lat, lon);
+  }, [fetchWeather]);
 
   const handleInputChange = useCallback((event) => {
     const value = event.target.value;
     setLocation(value);
   }, []);
+
+  const handleInputClear = useCallback(() => {
+    setLocation('');
+    clearSuggestions();
+  }, [clearSuggestions]);
 
   const renderContent = () => {
     if (data.name) {
@@ -38,14 +53,14 @@ export default function Main() {
       return (
         <div className='flex flex-col items-center justify-start h-full'>
           <p className='py-5 text-3xl font-bold sm:text-4xl'>Location not found.</p>
-          <p className='text-lg text-center sm:text-xl px-7'>Please check the city name or US zip code you entered.</p>
+          <p className='text-lg text-center sm:text-xl px-7'>Please check the city name you entered.</p>
         </div>
       );
     } else {
       return (
         <div className='flex flex-col items-center justify-start h-full'>
           <h1 className="py-5 text-4xl font-bold sm:text-5xl">Welcome!</h1>
-          <p className="text-lg text-center sm:text-xl px-7">Enter a city name or US zip code to view weather information.</p>
+          <p className="text-lg text-center sm:text-xl px-7">Enter a city name to view weather information.</p>
         </div>
       );
     }
@@ -61,6 +76,9 @@ export default function Main() {
             location={location}
             handleInputChange={handleInputChange}
             searchLocation={searchLocation}
+            suggestions={suggestions}
+            setLocation={setLocation}
+            onInputClear={handleInputClear}
           />
           <div className="flex-grow w-full max-w-md mx-auto">
             <TransitionWrapper isLoading={isLoading}>
