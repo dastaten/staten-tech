@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+// Analytics
+import { initGA } from './analytics';
+import { AnalyticsWrapper } from './AnalyticsWrapper';
+
 // Router
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -16,11 +20,14 @@ import Contact from './pages/Contact';
 import Confirmation from './pages/Confirmation';
 import PageNotFound from './pages/PageNotFound';
 import FlexBox from './projects/flex-box/FlexBox';
-import GroceryList from './projects/grocery-list/Main';
 import WeatherApp from './projects/weather-app/Main';
+import RiseOfTheThrall from './projects/rise-of-the-thrall/RiseOfTheThrall';
 
 // Styles
 import './index.css';
+
+// Initialize GA
+initGA('G-RTR6J56N84');
 
 const router = createBrowserRouter(
   [
@@ -54,18 +61,20 @@ const router = createBrowserRouter(
       element: <FlexBox />,
     },
     {
-      path: '/grocery-list',
-      element: <GroceryList />,
-    },
-    {
       path: '/weather-app',
       element: <WeatherApp />,
+    },
+    {
+      path: '/rise-of-the-thrall',
+      element: <RiseOfTheThrall />,
     },
   ]
 );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+    <AnalyticsWrapper>
+      <RouterProvider router={router} />
+    </AnalyticsWrapper>
+  </React.StrictMode>
 );

@@ -11,12 +11,12 @@ export default function Main() {
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
   const [location, setLocation] = useState('');
-  const debouncedLocation = useDebounce(location, 300);
+  const debouncedLocation = useDebounce(location, 150);
 
   const { data, notFound, isLoading, fetchWeather, suggestions, fetchSuggestions, clearSuggestions } = useWeather(apiKey);
 
   useEffect(() => {
-    document.title = 'React Weather App | A Staten Tech Project';
+    document.title = 'WeatherSense | An intelligent weather application built with React';
   }, []);
 
   useEffect(() => {
@@ -70,7 +70,7 @@ export default function Main() {
     <div className="relative h-screen font-weather">
       <div className="absolute inset-0 bg-center bg-cover" style={{ backgroundImage: `url(${clouds})` }}></div>
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-      <div className="relative z-10 flex flex-col h-full py-10 text-gray-50">
+      <div className="relative z-10 flex flex-col h-full pt-10 pb-24 sm:pb-12 text-gray-50">
         <div className="flex flex-col flex-grow">
           <SearchForm
             location={location}
